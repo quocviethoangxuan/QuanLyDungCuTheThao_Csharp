@@ -30,7 +30,6 @@ namespace WindowsFormsApp1.DAO
             {
                 hashPass += b;
             }
-            MessageBox.Show(hashPass);
             string query = "Select * From dbo.Account Where username = '"+username+"' and password = '"+hashPass+"' ";
             DataTable result = DataProvider.Instance.ExcuteQuery(query);
             return result.Rows.Count > 0;
